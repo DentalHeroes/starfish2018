@@ -2,6 +2,7 @@
 * [Parts](../../wiki/Parts)
   * [Parts List](../../wiki/Parts#part-list)
   * [Wiring](../../wiki/Parts#wiring)
+  * [Notes](../../wiki/Parts#notes)
 * [Setup](../../wiki/Setup)
   * [Install Raspbian](../../wiki/Setup#install-raspbian)
   * [Connect to WiFi](../../wiki/Setup#connect-to-wifi)
