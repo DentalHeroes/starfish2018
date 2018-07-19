@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+}
+
+h1, p, #outside-weather-container {
+    text-align: center;
+}
+
+#weather-icon {
+    font-size: 50px;
+    margin: 10px;
+}
+
+#weather-desc {
+    font-size: 20px;
+    margin: 0;
+}
+
+#weather-location {
+    font-size: 30px;
+}
+
+#background-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+#weather-container {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+}
+
+#outside-weather-container, #loading {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+#loading > span {
+    margin: 20px 0;
+    font-size: 60px;
+}
+
+#loading > p {
+    font-size: 30px;
+}
+
+.weather-wrapper {
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .weather-wrapper:nth-of-type(1) {
+            border-right: 3px solid white;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .weather-wrapper:nth-of-type(1) {
+            border-bottom: 3px solid white;
+    }
+}
+
+.weather-wrapper > p {
+    font-size: 30px;
+}
+
+.alert-wrapper {	
+  	
+	clear: both;
+    padding: 20px;
+    margin: 20px;
+}
+
+.title {
+    text-decoration: underline;
+}
