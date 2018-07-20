@@ -114,6 +114,8 @@ function getLoading(){
 
 //Uses a switch statement to map different weather
 //conditions to their appropriate weather icon
+//conditions taken from api documentaion
+//https://openweathermap.org/weather-conditions
 function	mapWeather(description, isDay) {
 	switch (description) {
 		case 'clear sky':
@@ -133,21 +135,58 @@ function	mapWeather(description, isDay) {
 		case 'scattered clouds':
 		case 'broken clouds':
 		case 'mist':
+		case 'overcast clouds':
 			return {
 				icon: '<span id="weather-icon" class="fas fa-cloud"></span>'
 			}
 		case 'shower rain':
 		case 'rain':
+		case 'light rain':
+		case 'moderate rain':
+		case 'light intensity drizzle':
+		case 'drizzle':
+		case 'heavy intensity drizzle':
+		case 'light intensity drizzle rain':
+		case 'drizzle rain':
+		case 'heavy intensity drizzle rain':
+		case 'shower rain and drizzle':
+		case 'heavy shower rain and drizzle':
+		case 'shower drizzle':
+		case 'heavy intensity rain':
+		case 'very heavy rain':
+		case 'extreme rain':
+		case 'freezing rain':
+		case 'light intensity shower rain':
+		case 'shower rain':
+		case 'heavy intensity shower rain':
+		case 'ragged shower rain':		
 			return {
 				icon: '<span id="weather-icon" class="fas fa-tint"></span>'
 			}
 		case 'thunderstorm':
-	case 'thunderstorm with heavy rain':
+		case 'thunderstorm with heavy rain':
+		case 'thunderstorm with rain':
+		case 'thunderstorm with light rain':
+		case 'light thunderstorm':
+		case 'heavy thunderstorm':
+		case 'ragged thunderstorm':
+		case 'thunderstorm with light drizzle':
+		case 'thunderstorm with drizzle':
+		case 'thunderstorm with heavy drizzle':
 			return {
 				icon: '<span id="weather-icon" class="fas fa-bolt"></span>'
 			}
 		case 'snow':
-			return {
+		case 'light snow':
+		case 'heavy snow':
+		case 'sleet':
+		case 'shower sleet':
+		case 'light rain and snow':
+		case 'rain and snow':
+		case 'light shower snow':
+		case 'shower snow':
+		case 'heavy shower snow':
+			return {			
 				icon: '<span id="weather-icon" class="fas fa-snowflake"></span>'
 			}
 		default:
@@ -246,5 +285,4 @@ function getWeatherLocation(){
 		var locationType = 'zip=' + zipcode + ',us';
 		getWeather(locationType);
 	}
-
 }
