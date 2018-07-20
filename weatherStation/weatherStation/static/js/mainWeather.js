@@ -35,7 +35,7 @@ function	getWeather(locationType) {
 		type: 'GET',
 		dataType: 'jsonp',
 		success: function (data) {
-			
+
 			//create the sensor data content and append it to the wrapper
 			wrapper.append(createWeatherWidg(data));
 		},
@@ -79,7 +79,7 @@ function    getSensorData() {
 			clearLoadingScreen();
 		},
 		error: function (error) {
-			alert('Failed!');			
+			alert('Failed!');
 			//create refresh button
 			var button = '<p><button id="submitZip" onclick="refreshSensor()" class="btn btn-primary" >Refresh</button></p>';
 			//bind the SensorDataWrapper element to a variable
@@ -100,19 +100,19 @@ function refreshSensor(){
 	wrapper.empty();
 	wrapper.append(getLoading());
 	getSensorData()
-	
+
 }
-	
+
 function getLoading(){
 return '<div id="SensorDataWrapper" class="col-xs-12">' +
 			 '<div id="loading" class="col-xs-12 col-sm-8">' +
 				'<span class="fas fa-spinner fa-spin"></span>' +
 				'<p>Loading...</p>' +
 			'</div>' +
-       '</div>';	
-}	
-	
-//Uses a switch statement to map different weather 
+       '</div>';
+}
+
+//Uses a switch statement to map different weather
 //conditions to their appropriate weather icon
 function	mapWeather(description, isDay) {
 	switch (description) {
@@ -158,7 +158,7 @@ function	mapWeather(description, isDay) {
 }
 
 function	createWeatherWidg(data) {
-				
+
 	var isDay = this.isDaytime(new Date(data.sys.sunrise), new Date(data.sys.sunset));
 	var mappedData = this.mapWeather(data.weather[0].description, isDay);
 	var location = data.name;
@@ -200,9 +200,6 @@ function	isDaytime(sunrise, sunset) {
 function	getDaySeconds(time) {
 	return time.getSeconds() + (60 * (time.getMinutes() + (60 * time.getHours())))
 }
-	
-	
- 
 
 var images = [];
 
@@ -226,20 +223,14 @@ function getBackgroundImage() {
 
 
 function sendAlert() {
-	//uses ajax to send an http Get request to the Alert API
-    $.ajax({
-	// notice how the url is different. It doesn't include 'http://' which
-	// tells us that we're calling an API on our internal server.
-        url: '/alert',
-        type: 'GET'
-    });
+	alert('TODO: Add alert API call later');
 };
 
 
 function getWeatherLocation(){
 	//get zipcode from user input
 	var zipcode = $('#zip').val();
-	
+
 	//check if a zipcode was entered
 	if (zipcode.length === 0){
 		//if no zipcode was entered get location from ip
@@ -255,5 +246,5 @@ function getWeatherLocation(){
 		var locationType = 'zip=' + zipcode + ',us';
 		getWeather(locationType);
 	}
-	
+
 }
