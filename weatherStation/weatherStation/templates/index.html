@@ -40,8 +40,10 @@
                 <p id='weather-desc'></p>
                 <p id='weather-location'></p>
                 <div class="col-xs-12 col-sm-6 weather-wrapper">
-				<input type="number" id="zip" placeholder="enter zip code, or leave blank to use IP" class="form-control" >
-				<button id="submitZip" onclick="getWeatherLocation()" class="btn btn-primary" style="margin: 15px;">Get Weather</button>
+				    <input type="number" id="zip" placeholder="enter zip code, or leave blank to use IP" class="form-control" >
+				    <button id="submitZip" onclick="getWeatherLocation()" class="btn btn-primary" style="margin: 15px;">
+                        Get Weather
+                    </button>
                 </div>
                 <div class="col-xs-12 col-sm-6 weather-wrapper">
 					 <div id='loading' class='col-xs-6 col-sm-8'>
@@ -50,7 +52,7 @@
 					</div>
                 </div>
 				<div id='AlertWrapper' id="alert-wrapper" class="alert-wrapper">
-					<button type="button" class="btn btn-danger" onclick="sendAlert();"><i class="far fa-bell"></i>&nbsp;Send Alert</button>
+					<button type="button" class="btn btn-danger"><i class="far fa-bell"></i>&nbsp;Send Alert</button>
 				</div>
             </div>
 

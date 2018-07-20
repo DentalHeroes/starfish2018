@@ -104,12 +104,12 @@ function refreshSensor(){
 }
 
 function getLoading(){
-return '<div id="SensorDataWrapper" class="col-xs-12">' +
-			 '<div id="loading" class="col-xs-12 col-sm-8">' +
-				'<span class="fas fa-spinner fa-spin"></span>' +
-				'<p>Loading...</p>' +
-			'</div>' +
-       '</div>';
+	return '<div id="SensorDataWrapper" class="col-xs-12">' +
+		        '<div id="loading" class="col-xs-12 col-sm-8">' +
+			       '<span class="fas fa-spinner fa-spin"></span>' +
+				   '<p>Loading...</p>' +
+			    '</div>' +
+           '</div>';
 }
 
 //Uses a switch statement to map different weather
