@@ -32,21 +32,21 @@ Args:
 """	
 def alert(repeat):
 	#loop through and beep, {repeat} times
-	for i in range(0, repeat):
+	
 		#turn LED on
-		GPIO.output(LEDPIN,GPIO.HIGH)
+		
 		#square wave loop
-		for pulse in range(60):
-			#set buzzer low
-			GPIO.output(BUZZPIN, GPIO.LOW)
-			time.sleep(0.0009)
-			#set buzzer high
-			GPIO.output(BUZZPIN, GPIO.HIGH)
-			time.sleep(0.0009)
+		
+			#set buzzer low and sleep
+			
+			
+			#set buzzer high and sleep
+			
+			
 		#turn LED off
-		GPIO.output(LEDPIN,GPIO.LOW)
+		
 		#rest between beeps
-		time.sleep(0.3)
+		
 		
 
 def destroy():
