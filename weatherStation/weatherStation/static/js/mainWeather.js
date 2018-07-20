@@ -119,43 +119,40 @@ function	mapWeather(description, isDay) {
 		case 'clear sky':
 			if (isDay) {
 				return {
-					description: 'Sunny',
 					icon: '<span id="weather-icon" class="fas fa-sun"></span>'
 				}
 			} else {
 				return {
-					description: 'Clear Skies',
 					icon: '<span id="weather-icon" class="fas fa-moon"></span>'
 				}
 			}
 		case 'few clouds':
 			return {
-				description: 'Partly Cloudy',
 				icon: '<span id="weather-icon" class="fas fa-cloud"></span>'
 			}
 		case 'scattered clouds':
 		case 'broken clouds':
 		case 'mist':
 			return {
-				description: 'Cloudy',
 				icon: '<span id="weather-icon" class="fas fa-cloud"></span>'
 			}
 		case 'shower rain':
 		case 'rain':
 			return {
-				description: 'Rainy',
 				icon: '<span id="weather-icon" class="fas fa-tint"></span>'
 			}
 		case 'thunderstorm':
 	case 'thunderstorm with heavy rain':
 			return {
-				description: 'Thunderstorm',
 				icon: '<span id="weather-icon" class="fas fa-bolt"></span>'
 			}
 		case 'snow':
 			return {
-				description: 'Snowing',
 				icon: '<span id="weather-icon" class="fas fa-snowflake"></span>'
+			}
+		default:
+			return{
+				icon: '<span id="weather-icon" class=""></span>'
 			}
 	}
 }
@@ -167,7 +164,7 @@ function	createWeatherWidg(data) {
 	var location = data.name;
 
 	$('#weather-icon').replaceWith(mappedData.icon);
-	$('#weather-desc').text(mappedData.description);
+	$('#weather-desc').text(data.weather[0].description);
 	$('#weather-location').text(location);
 
 	return "<p class='title'>Outside</p>" +
