@@ -27,7 +27,8 @@ def index():
 			if result.errorCode == 0:
 				break
 			else:
-				time.sleep(.5)
+                                print("Got bad data, retry " + str(x + 1) + " of 10")
+				time.sleep(2)
 		else:
 			errorCode = 0
 			humidity = 0

@@ -98,7 +98,6 @@ class DTH11:
 
         # Parse the rawState into pull up signal lengths
         pullUpLengths = self.__parseRawState(rawState)
-        print (pullUpLengths)
 
         # If we do not have 40 bits at this point, then there was some kind of
         # problem
