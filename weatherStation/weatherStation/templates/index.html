@@ -36,25 +36,26 @@
         <div class='col-xs-12' id='weather-container'>
             <div class="col-xs-12 col-sm-2"></div>
             <div id="outside-weather-container" class="col-xs-12 col-sm-8">
-                <h1>RES' Wacky Weather App</h1>
                 <span id='weather-icon'></span>
                 <p id='weather-desc'></p>
                 <p id='weather-location'></p>
-                <div id="WeatherWrapper" class="col-xs-12 col-sm-6 weather-wrapper">
-				<input type="number" id="zip" placeholder="enter zip code, or leave blank to use IP" class="form-control" >
-				<button id="submitZip" onclick="getWeatherLocation()" class="btn btn-primary" style="margin: 15px;">Get Weather</button>									
+                <div class="col-xs-12 col-sm-6 weather-wrapper">
+				    <input type="number" id="zip" placeholder="enter zip code, or leave blank to use IP" class="form-control" >
+				    <button id="submitZip" onclick="getWeatherLocation()" class="btn btn-primary" style="margin: 15px;">
+                        Get Weather
+                    </button>
                 </div>
-                <div id="SensorDataWrapper" class="col-xs-12 col-sm-6 weather-wrapper">
+                <div class="col-xs-12 col-sm-6 weather-wrapper">
 					 <div id='loading' class='col-xs-6 col-sm-8'>
 						<span class='fas fa-spinner fa-spin'></span>
 						<p>Loading...</p>
 					</div>
-                </div>				
+                </div>
 				<div id='AlertWrapper' id="alert-wrapper" class="alert-wrapper">
-					<button type="button" class="btn btn-danger" onclick="sendAlert();"><i class="far fa-bell"></i>&nbsp;Send Alert</button>				
-				</div>				
-            </div>		
-            
+					<button type="button" class="btn btn-danger"><i class="far fa-bell"></i>&nbsp;Send Alert</button>
+				</div>
+            </div>
+
             <div class="col-xs-12 col-sm-2"></div>
         </div>
 		<input type='hidden' id='locationType'>

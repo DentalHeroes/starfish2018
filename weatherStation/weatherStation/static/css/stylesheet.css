@@ -2,10 +2,6 @@ html, body {
     height: 100%;
 }
 
-h1, p, #outside-weather-container {
-    text-align: center;
-}
-
 #weather-icon {
     font-size: 50px;
     margin: 10px;
@@ -70,8 +66,7 @@ h1, p, #outside-weather-container {
     font-size: 30px;
 }
 
-.alert-wrapper {	
-  	
+.alert-wrapper {
 	clear: both;
     padding: 20px;
     margin: 20px;
